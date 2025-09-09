@@ -1,0 +1,140 @@
+Sure! Let’s split your homepage into clean, maintainable files.
+
+---
+
+### 📄 `index.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Five Steps IT Solutions</title>
+  <meta name="description" content="Helping local businesses go online with simple, affordable websites in English and Marathi.">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Language Toggle -->
+  <button id="lang-toggle">Switch to Marathi</button>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Your Business, Online in 5 Simple Steps</h1>
+    <p>Affordable websites for local businesses.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </header>
+
+  <!-- What We Do -->
+  <section class="what-we-do">
+    <h2>What We Do</h2>
+    <p>We design static websites that are fast, mobile-friendly, and AI-powered.</p>
+  </section>
+
+  <!-- 5 Step Process -->
+  <section class="steps">
+    <h2>Our 5 Step Process</h2>
+    <ol>
+      <li>Understand your business</li>
+      <li>Create design draft</li>
+      <li>Build with AI + coding</li>
+      <li>Review & feedback</li>
+      <li>Launch your site</li>
+    </ol>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="grid">
+      <div class="card">Demo Project 1</div>
+      <div class="card">Demo Project 2</div>
+      <div class="card">Demo Project 3</div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We are Five Steps IT Solutions, a local initiative to help small businesses establish their online presence.</p>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p>₹2,500 one-time</p>
+        <ul>
+          <li>Up to 3 pages</li>
+          <li>Free domain & hosting (1st year)</li>
+          <li>Delivery in 5 days</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Standard</h3>
+        <p>₹4,500 one-time</p>
+        <ul>
+          <li>Up to 5 pages</li>
+          <li>Google Business setup</li>
+          <li>1 free update in 1st year</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Premium</h3>
+        <p>₹7,500 one-time</p>
+        <ul>
+          <li>Up to 8 pages</li>
+          <li>SEO optimized</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919999999999" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+</body>
+</html>
+```
+
+---
+
+
+
+---
+
+### ⚙️ `script.js`
+```javascript
+// Language toggle (English/Marathi)
+const toggleBtn = document.getElementById('lang-toggle');
+let isMarathi = false;
+
+toggleBtn.addEventListener('click', () => {
+  isMarathi = !isMarathi;
+  if (isMarathi) {
+    document.body.innerHTML = document.body.innerHTML.replace('Your Business, Online in 5 Simple Steps', 'आपला व्यवसाय, फक्त ५ सोप्या पावलांत ऑनलाइन');
+    toggleBtn.textContent = 'Switch to English';
+  } else {
+    window.location.reload(); // quick reset to English
+  }
+});
+```
+
+---
+
+✅ Now you have a **separated structure** that’s easier to maintain. 
+
+Do you want me to also create a **WordPress block (Gutenberg JSON)** so you can drop this directly into a WordPress site without touching code? 
